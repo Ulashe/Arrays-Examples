@@ -68,6 +68,26 @@ namespace ConsoleApp1
                 }
             }
             Console.WriteLine("\n-----------------");
+            // Reverse and sort
+            int[] array = new int[]{ 3, 6, 7, 5, 8, 9, 4, 2 };
+            Console.Write("Original array: ");
+            foreach(int i in array)
+            {
+                Console.Write("{0} ", i);
+            }
+            int[] temp = array;
+            Console.Write("\nReversed array: ");
+            Array.Reverse(temp);
+            foreach(int i in temp)
+            {
+                Console.Write("{0} ", i);
+            }
+            Array.Sort(temp);
+            Console.Write("\nSorted array: ");
+            foreach (int i in temp)
+            {
+                Console.Write("{0} ", i);
+            }
 
             Console.ReadLine();
         }
