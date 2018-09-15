@@ -50,7 +50,24 @@ namespace ConsoleApp1
                 }
             }
             Console.WriteLine("\n-----------------");
+            // Jagged arrays (array of arrays)
 
+            string[][] jag = new string[3][]; // Declaring an array, does not create the array in memory
+            jag[0] = new string[4] { "Desktop", "Laptop", "Tablet", "Mobile" };
+            jag[1] = new string[5] { "BWM", "AUDI", "TOYOTA", "MERCEDES", "PORSCHE" };
+            jag[2] = new string[2] { "Microsoft", "Apple" };
+
+            double[][] jag2 = new double[3][] { new double[] { 13.4, 15.6, 17.4 }, new double[] { 2, 4, 5, 1},
+            new double[]{ 5, 6, 7} };
+
+            for(int i = 0; i < jag.Length; i++)
+            {
+                for(int j = 0; j < jag[i].Length; j++)
+                {
+                    Console.WriteLine("jag[{0}][{1}]: {2}", i, j, jag[i][j]);
+                }
+            }
+            Console.WriteLine("\n-----------------");
 
             Console.ReadLine();
         }
